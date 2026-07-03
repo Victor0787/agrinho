@@ -1,64 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Rakkas&display=swap');
-
-/* Variáveis */
-:root {
-    --primary-color: #026773;
-    --secondary-color: #3CA6A6;
-    --text-color: #024959;
-    --background-color: #F2E3D5;
-    --button-hover: #012E40;
-    --font-body: "Chocolate Classical Sans", serif;
-    --font-titulo: "Rakkas", serif;
-}
-
-/* código omitido */ /* código omitido */
-
-/* Reset */
+/* ==========================================
+   CONFIGURAÇÕES GERAIS E RESETS
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-body);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Corpo da página */
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #f4f7f5;
+    color: #333;
     line-height: 1.6;
 }
 
-h3 {
-    margin-top: 25px;
+/* ==========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================== */
+header {
+    background-color: #1b4332;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #52b788;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #52b788;
+}
+
+/* ==========================================
+   HERO SECTION (BANNER PRINCIPAL)
+   ========================================== */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2070') no-repeat center center/cover;
+    height: 60vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #d8f3dc;
+    max-width: 800px;
+    font-weight: 300;
+}
+
+/* ==========================================
+   CONTEÚDO E ESTRUTURA PRINCIPAL
+   ========================================== */
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    margin-bottom: 5rem;
+}
+
+h2 {
+    color: #1b4332;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #52b788;
+    padding-bottom: 0.5rem;
+    display: inline-block;
 }
 
 p {
-    margin-top: 20px;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    color: #4a4a4a;
 }
 
-img {
-    max-width: 90%;
+/* DESTAQUE / CALLOUT */
+.destaque {
+    background-color: #d8f3dc;
+    border-left: 6px solid #40916c;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
-/* código omitido */ /* código omitido */
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .conteudo {
-        width: 90%;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    .cta-button {
-        width: 100%;
-    }
-}
+.destaque h3 {
+    color: #1b4332;
